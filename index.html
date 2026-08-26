@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>weir_thoughts — Clippy</title>
+
+<style>
+
+/* =========================================================
+   WEIR_THOUGHTS
+   CLIPPY PROFILE
+   WINDOWS 95 / WINDOWS XP AESTHETIC
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #008080;
+    color: #000;
+    font-family:
+        "MS Sans Serif",
+        "Microsoft Sans Serif",
+        Arial,
+        sans-serif;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BLISS
+   ========================================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.04),
+            rgba(0,0,0,.08)
+        );
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN AREA
+   ========================================================= */
+
+.main {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding:
+        40px
+        20px
+        90px;
+}
+
+
+/* =========================================================
+   WINDOW
+   ========================================================= */
+
+.window {
+    width: min(680px, 96%);
+    margin: 0 auto;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    box-shadow:
+        3px 3px 0 #000;
+}
+
+
+/* =========================================================
+   TITLE BAR
+   ========================================================= */
+
+.titlebar {
+    height: 30px;
+
+    margin: 3px 3px 0;
+
+    background: #000080;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        2px
+        3px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    user-select: none;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    overflow: hidden;
+}
+
+.title-icon {
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   WINDOW CONTROLS
+   ========================================================= */
+
+.controls {
+    display: flex;
+    gap: 2px;
+}
+
+.control {
+    width: 21px;
+    height: 21px;
+
+    background: #c0c0c0;
+
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   WINDOW BODY
+   ========================================================= */
+
+.window-body {
+    margin: 3px;
+
+    background: #fff;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    padding: 35px 25px 30px;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile {
+    text-align: center;
+}
+
+
+/* =========================================================
+   CLIPPY
+   ========================================================= */
+
+.clippy-wrap {
+    width: 230px;
+    height: 230px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation:
+        breathe
+        4s
+        ease-in-out
+        infinite;
+
+    filter:
+        drop-shadow(
+            0 12px 8px
+            rgba(0,0,0,.25)
+        );
+}
+
+.clippy {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   BREATHING
+   ========================================================= */
+
+@keyframes breathe {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translateY(-5px)
+            scale(1.012);
+    }
+
+    50% {
+        transform:
+            translateY(-9px)
+            scale(1.025);
+    }
+
+    75% {
+        transform:
+            translateY(-5px)
+            scale(1.012);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   NAME
+   ========================================================= */
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    color: #000;
+
+    text-shadow:
+        1px 1px 0 #fff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+    max-width: 460px;
+
+    margin: 0 auto 30px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   SOCIAL AREA
+   ========================================================= */
+
+.socials {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 14px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SOCIAL CARD
+   ========================================================= */
+
+.card {
+    min-height: 92px;
+
+    background: #c0c0c0;
+
+    color: #000;
+
+    text-decoration: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    box-shadow:
+        1px 1px 0 #000;
+
+    transition: none;
+}
+
+.card:hover {
+    background: #d4d4d4;
+}
+
+.card:active {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    box-shadow: none;
+
+    transform:
+        translate(
+            1px,
+            1px
+        );
+}
+
+
+/* =========================================================
+   SOCIAL ICON
+   ========================================================= */
+
+.card-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   STATUS BAR
+   ========================================================= */
+
+.status {
+    margin-top: 25px;
+
+    height: 25px;
+
+    background: #c0c0c0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 3px 7px;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    font-size: 11px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   TASKBAR
+   ========================================================= */
+
+.taskbar {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 42px;
+
+    z-index: 100;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #fff;
+
+    display: flex;
+    align-items: center;
+
+    padding:
+        3px
+        5px;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+.start {
+    height: 32px;
+
+    min-width: 82px;
+
+    padding: 0 8px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.start:active {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    padding-top: 2px;
+}
+
+
+/* =========================================================
+   WINDOWS LOGO
+   ========================================================= */
+
+.windows-logo {
+    width: 19px;
+    height: 19px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    grid-template-rows:
+        1fr
+        1fr;
+
+    gap: 1px;
+
+    transform:
+        skewY(-7deg);
+}
+
+.windows-logo span {
+    background: #000080;
+}
+
+
+/* =========================================================
+   TASKBAR DIVIDER
+   ========================================================= */
+
+.divider {
+    width: 2px;
+    height: 30px;
+
+    margin:
+        0
+        7px;
+
+    border-left: 2px solid #808080;
+    border-right: 1px solid #fff;
+}
+
+
+/* =========================================================
+   TASK ITEM
+   ========================================================= */
+
+.task {
+    height: 32px;
+
+    min-width: 150px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 9px;
+
+    gap: 7px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CLOCK
+   ========================================================= */
+
+.clock {
+    margin-left: auto;
+
+    height: 32px;
+
+    min-width: 85px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .main {
+        padding:
+            20px
+            8px
+            65px;
+    }
+
+    .window {
+        width: 98%;
+    }
+
+    .window-body {
+        padding:
+            25px
+            15px
+            25px;
+    }
+
+    .clippy-wrap {
+        width: 190px;
+        height: 190px;
+    }
+
+    .name {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .socials {
+        grid-template-columns: 1fr;
+    }
+
+    .task {
+        min-width: 0;
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .main {
+        padding:
+            12px
+            5px
+            60px;
+    }
+
+    .window-body {
+        padding:
+            20px
+            10px
+            20px;
+    }
+
+    .clippy-wrap {
+        width: 165px;
+        height: 165px;
+    }
+
+    .name {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .task {
+        display: none;
+    }
+
+    .clock {
+        min-width: 75px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .clippy-wrap {
+        animation: none;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="app">
+
+
+<!-- =====================================================
+     BLISS BACKGROUND
+     ===================================================== -->
+
+<div class="background">
+
+    <img
+        src="https://wink.messengergeek.com/uploads/default/original/3X/e/9/e9b64fe9550c6d4d1ed04d15404faf19d88ad202.jpeg"
+        alt="Windows XP Bliss"
+    >
+
+</div>
+
+
+<!-- =====================================================
+     MAIN PAGE
+     ===================================================== -->
+
+<main class="main">
+
+
+<div class="window">
+
+
+<!-- =====================================================
+     TITLE BAR
+     ===================================================== -->
+
+<div class="titlebar">
+
+    <div class="title-left">
+
+        <div class="title-icon">
+            📎
+        </div>
+
+        <div class="title-text">
+            weir_thoughts.exe
+        </div>
+
+    </div>
+
+
+    <div class="controls">
+
+        <div class="control">
+            _
+        </div>
+
+        <div class="control">
+            □
+        </div>
+
+        <div class="control">
+            ×
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     WINDOW BODY
+     ===================================================== -->
+
+<div class="window-body">
+
+
+<section class="profile">
+
+
+<!-- =====================================================
+     CLIPPY SVG
+     ===================================================== -->
+
+<div class="clippy-wrap">
+
+
+<svg
+    class="clippy"
+    viewBox="0 0 240 240"
+    xmlns="http://www.w3.org/2000/svg"
+>
+
+
+<!-- Shadow -->
+
+<ellipse
+    cx="120"
+    cy="216"
+    rx="55"
+    ry="10"
+    fill="rgba(0,0,0,.18)"
+/>
+
+
+<!-- Main paperclip -->
+
+<path
+    d="
+        M142 38
+        C112 10 62 25 62 68
+        L62 153
+        C62 186 86 207 116 207
+        C151 207 177 183 177 148
+        L177 76
+        C177 53 160 37 139 37
+        C117 37 101 54 101 76
+        L101 148
+        C101 158 107 164 116 164
+        C126 164 132 157 132 148
+        L132 79
+    "
+
+    fill="none"
+
+    stroke="#777777"
+
+    stroke-width="18"
+
+    stroke-linecap="round"
+
+    stroke-linejoin="round"
+/>
+
+
+<path
+    d="
+        M142 38
+        C112 10 62 25 62 68
+        L62 153
+        C62 186 86 207 116 207
+        C151 207 177 183 177 148
+        L177 76
+        C177 53 160 37 139 37
+        C117 37 101 54 101 76
+        L101 148
+        C101 158 107 164 116 164
+        C126 164 132 157 132 148
+        L132 79
+    "
+
+    fill="none"
+
+    stroke="#d8d8d8"
+
+    stroke-width="11"
+
+    stroke-linecap="round"
+
+    stroke-linejoin="round"
+/>
+
+</svg>
+
+</div>
+
+
+<!-- =====================================================
+     NAME
+     ===================================================== -->
+
+<h1 class="name">
+    hey! I'm clippy.
+</h1>
+
+
+<!-- =====================================================
+     DESCRIPTION
+     ===================================================== -->
+
+<div class="description">
+
+    <br>Thoughts live here that are not usually expressed in words: strange, real, familiar.🖥️
+
+</div>
+
+
+<!-- =====================================================
+     SOCIAL LINKS
+     ===================================================== -->
+
+<div class="socials">
+
+
+<a
+    class="card"
+    href="https://t.me/weir_thoughts"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <div class="card-icon">
+        ✈
+    </div>
+
+    <div class="card-title">
+        Telegram
+    </div>
+
+    <div class="card-subtitle">
+        Visit Telegram
+    </div>
+
+</a>
+
+
+<a
+    class="card"
+    href="https://instagram.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <div class="card-icon">
+        ◎
+    </div>
+
+    <div class="card-title">
+        Instagram
+    </div>
+
+    <div class="card-subtitle">
+        Visit Instagram
+    </div>
+
+</a>
+
+
+</div>
+
+
+<!-- =====================================================
+     STATUS
+     ===================================================== -->
+
+<div class="status">
+
+    Ready.
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+<!-- =====================================================
+     TASKBAR
+     ===================================================== -->
+
+<div class="taskbar">
+
+
+<div class="start">
+
+    <div class="windows-logo">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    Start
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="task">
+
+    📎
+
+    <span>
+        weir_thoughts.exe
+    </span>
+
+</div>
+
+
+<div
+    class="clock"
+    id="clock"
+>
+    00:00:00
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   WINDOWS 95 CLOCK
+   ========================================================= */
+
+function updateClock() {
+
+    const clock =
+        document.getElementById("clock");
+
+    const now =
+        new Date();
+
+    let hours =
+        now.getHours();
+
+    const minutes =
+        String(
+            now.getMinutes()
+        ).padStart(
+            2,
+            "0"
+        );
+
+    const seconds =
+        String(
+            now.getSeconds()
+        ).padStart(
+            2,
+            "0"
+        );
+
+    const period =
+        hours >= 12
+            ? "PM"
+            : "AM";
+
+    hours =
+        hours % 12 || 12;
+
+    clock.textContent =
+        hours +
+        ":" +
+        minutes +
+        ":" +
+        seconds +
+        " " +
+        period;
+}
+
+
+/* =========================================================
+   START CLOCK
+   ========================================================= */
+
+updateClock();
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+/* =========================================================
+   SIMPLE WINDOW TITLE EFFECT
+   ========================================================= */
+
+document.title =
+    "weir_thoughts.exe";
+
+
+/* =========================================================
+   PREVENT IMAGE DRAG
+   ========================================================= */
+
+document
+    .querySelectorAll("img")
+    .forEach(
+        function(img) {
+
+            img.addEventListener(
+                "dragstart",
+                function(event) {
+
+                    event.preventDefault();
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+  </html>
